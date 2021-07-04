@@ -5,7 +5,9 @@
 ## :bookmark_tabs: **Description** 
 This is a simple standalone **Car Lock** script made for **FiveM**.  
 
-To use this script, you must go inside of your vehicle and do **/save**. At that point, that vehicle will become your personal vehicle. It will also show a blip of the car on the map so you can know its location. To lock the saved vehicle, you must be within the radius (configurable in the *client.lua*), and do **/lock** in the chat. The saved vehicle's light will flash and a notification will appear, letting you know that the vehicle has been locked. To unlock it, just re-do the **/lock** command.
+To use this script, you must go inside of your vehicle and do **/save**. At that point, that vehicle will become your personal vehicle. It will also show a blip of the car on the map so you can know its location.
+To lock the saved vehicle, you must be within the radius (configurable in the *client.lua*), and do **/lock** in the chat. The saved vehicle's light will flash and a notification will appear, letting you know that the vehicle has been locked.
+To unlock it, just re-do the **/lock** command.
 
 
 ## :bulb: **Features** 
