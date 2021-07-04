@@ -9,7 +9,7 @@ To use this script, you must go inside of your vehicle and do **/save**. At that
 
 
 ## :bulb: **Features** 
-- Simple and Standalone
+- Simple and standalone
 - Key fob animation
 - Sound effect 
 - Flashing car lights 
@@ -17,7 +17,7 @@ To use this script, you must go inside of your vehicle and do **/save**. At that
 
 
 ## :eyes: **Preview** 
-### *Video demo*
+
 
 
 ## :white_check_mark: **Changelog**
