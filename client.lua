@@ -1,5 +1,5 @@
 -- CONFIG 
-lockDistance = 75 -- The radius you have to be in to lock/unlock your vehicle.
+lockDistance = 50 -- The radius you have to be in to lock/unlock your vehicle.
 
 --[[
 ─────────────────────────────────────────────────────────────────
