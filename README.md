@@ -25,5 +25,10 @@ To unlock it, just re-do the **/lock** command.
 
 
 ## :white_check_mark: **Changelog**
+> **v1.0.1**
+> - Added keybind option  
+> - Minor tweaks  
+> (Thanks to *cyanURP*)
+
 > **v1.0**
 > - Initial Release 
