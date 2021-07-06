@@ -37,6 +37,8 @@ local vehicle = saveVehicle
 end)
 
 -- Lock vehicle
+-- You can change the keybind in your game settings 
+RegisterKeyMapping('lock', 'Lock and unlock your saved car', 'keyboard', 'u') 
 RegisterCommand("lock", function()
     local vehicle = saveVehicle
 	local vehcoords = GetEntityCoords(vehicle)
@@ -48,33 +50,34 @@ RegisterCommand("lock", function()
 				PlaySoundFrontend(-1, "BUTTON", "MP_PROPERTIES_ELEVATOR_DOORS", 1)
 				TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 				SetVehicleDoorsLocked(vehicle, 2)
-				ShowNotification("~b~[CarLock] ~w~Vehicle ~r~locked~w~.")
+				ShowNotification("~b~[CarLock] ~w~Vehicle ~r~locked")
 				TriggerEvent('lockLights')
 				else
 				PlaySoundFrontend(-1, "BUTTON", "MP_PROPERTIES_ELEVATOR_DOORS", 1)
 				TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 				SetVehicleDoorsLocked(vehicle,1)
-				ShowNotification("~b~[CarLock] ~w~Vehicle ~g~unlocked~w~.")
+				ShowNotification("~b~[CarLock] ~w~Vehicle ~g~unlocked")
 				TriggerEvent('lockLights')
 				end
 			else
-				ShowNotification("~b~[CarLock] ~r~You must be closer to your vehicle.")
+				ShowNotification("~b~[CarLock] ~r~You must be closer to your vehicle")
 			end
 		else
-			ShowNotification("~b~[CarLock] ~r~No saved vehicle.")
+			ShowNotification("~b~[CarLock] ~r~No saved vehicle")
 		end
 	end)
-end)
+end) 
 
 -- Save vehicle
+-- You can change the keybind in your game settings 
+RegisterKeyMapping('save', 'Save and unsave the car you are in', 'keyboard', 'delete') 
 RegisterCommand("save",function()
 	local player = PlayerPedId()
-	if not (IsPedSittingInAnyVehicle(player)) then
-		ShowNotification("~b~[CarLock] ~r~You must be in a vehicle to save it.")
-	  elseif saved == true then
+	  if (IsPedSittingInAnyVehicle(player)) then
+			if saved == true then
 			saveVehicle = nil
 			RemoveBlip(targetBlip)
-			ShowNotification("~b~[CarLock] ~w~Vehicle ~r~removed~w~.")
+			ShowNotification("~b~[CarLock] ~w~Vehicle ~r~removed~")
 			saved = false
 		else
 			RemoveBlip(targetBlip)
@@ -82,8 +85,9 @@ RegisterCommand("save",function()
 			local vehicle = saveVehicle
 			targetBlip = AddBlipForEntity(vehicle)
 			SetBlipSprite(targetBlip,225)
-			ShowNotification("~b~[CarLock] ~w~Vehicle ~g~saved~w~.")
+			ShowNotification("~b~[CarLock] ~w~Vehicle ~g~saved")
 			saved = true
+		end
 	end
 end)
 
@@ -93,6 +97,3 @@ function ShowNotification(text)
     AddTextComponentString(text)
     DrawNotification(false, false)
 end
-
--- You can change the keybind in your game settings (default is u)
-RegisterKeyMapping('lock', 'Lock and unlock your saved car', 'keyboard', 'u') 
