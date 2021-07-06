@@ -21,7 +21,7 @@ To unlock it, just re-do the **/lock** command.
 
 
 ## :eyes: **Preview** 
-[Endah's Car Lock - FiveM Resource | DEMO](https://youtu.be/FtJ8i_xTXTw)
+[YouTube](https://youtu.be/FtJ8i_xTXTw)
 
 
 ## :white_check_mark: **Changelog**
