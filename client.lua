@@ -1,11 +1,10 @@
 -- CONFIG 
-local lockDistance = 15 -- The radius you have to be in to lock/unlock your vehicle.
+local lockDistance = 30 -- The radius you have to be in to lock/unlock your vehicle.
 
 --[[
 ─────────────────────────────────────────────────────────────────
 
 	CarLock (client.lua) - Created by ItzEndah
-	Current Version: 1.0 (July 2021)
 	
 	Support - ItzEndah#0001 on Discord
 	
@@ -49,20 +48,20 @@ RegisterCommand("lock", function()
 				PlaySoundFrontend(-1, "BUTTON", "MP_PROPERTIES_ELEVATOR_DOORS", 1)
 				TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 				SetVehicleDoorsLocked(vehicle, 2)
-				ShowNotification("You have ~r~locked~r~ ~w~your vehicle.")
+				ShowNotification("~b~[CarLock] ~w~Vehicle ~r~locked~w~.")
 				TriggerEvent('lockLights')
 				else
 				PlaySoundFrontend(-1, "BUTTON", "MP_PROPERTIES_ELEVATOR_DOORS", 1)
 				TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 				SetVehicleDoorsLocked(vehicle,1)
-				ShowNotification("You have ~g~unlocked~g~ ~w~your vehicle.")
+				ShowNotification("~b~[CarLock] ~w~Vehicle ~g~unlocked~w~.")
 				TriggerEvent('lockLights')
 				end
 			else
-				ShowNotification("~r~You must be closer to your vehicle.")
+				ShowNotification("~b~[CarLock] ~r~You must be closer to your vehicle.")
 			end
 		else
-			ShowNotification("~r~No saved vehicle.")
+			ShowNotification("~b~[CarLock] ~r~No saved vehicle.")
 		end
 	end)
 end)
@@ -71,11 +70,11 @@ end)
 RegisterCommand("save",function()
 	local player = PlayerPedId()
 	if not (IsPedSittingInAnyVehicle(player)) then
-		ShowNotification("~r~You must be in a vehicle to save it")
+		ShowNotification("~b~[CarLock] ~r~You must be in a vehicle to save it.")
 	  elseif saved == true then
 			saveVehicle = nil
 			RemoveBlip(targetBlip)
-			ShowNotification("Saved vehicle ~r~removed~w~.")
+			ShowNotification("~b~[CarLock] ~w~Vehicle ~r~removed~w~.")
 			saved = false
 		else
 			RemoveBlip(targetBlip)
@@ -83,7 +82,7 @@ RegisterCommand("save",function()
 			local vehicle = saveVehicle
 			targetBlip = AddBlipForEntity(vehicle)
 			SetBlipSprite(targetBlip,225)
-			ShowNotification("Vehicle ~g~saved~w~.")
+			ShowNotification("~b~[CarLock] ~w~Vehicle ~g~saved~w~.")
 			saved = true
 	end
 end)
@@ -95,4 +94,5 @@ function ShowNotification(text)
     DrawNotification(false, false)
 end
 
-RegisterKeyMapping('lock', 'Unlock and lock your saved car', 'keyboard', 'i') -- you can change the keybind in your game settings
+-- You can change the keybind in your game settings (default is u)
+RegisterKeyMapping('lock', 'Lock and unlock your saved car', 'keyboard', 'u') 
