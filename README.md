@@ -16,7 +16,7 @@ The keys can be changed in the game menu.
 - Key fob animation
 - Sound effect 
 - Flashing car lights 
-- Configurable interaction radius
+- Configurable keys & interaction radius
 
 
 ## :eyes: **Preview** 
