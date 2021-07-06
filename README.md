@@ -5,8 +5,8 @@
 ## :bookmark_tabs: **Description** 
 This is a simple standalone **Car Lock** script made for **FiveM**.  
 
-**DELETE** - Save/unsave the vehicle you are in  
-**U** - Lock/unlock the saved car
+- **DELETE** - Save/unsave the vehicle you are in  
+- **U** - Lock/unlock the saved car
 
 The keys can be changed in the game menu.
 
