@@ -6,5 +6,4 @@ description 'Vehicle lock system.'
 author 'ItzEndah'
 version '1.0'
 
-server_script "server.lua"
 client_script "client.lua"

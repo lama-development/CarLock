@@ -1,5 +1,5 @@
 -- CONFIG 
-lockDistance = 50 -- The radius you have to be in to lock/unlock your vehicle.
+local lockDistance = 15 -- The radius you have to be in to lock/unlock your vehicle.
 
 --[[
 ─────────────────────────────────────────────────────────────────
@@ -38,23 +38,22 @@ local vehicle = saveVehicle
 end)
 
 -- Lock vehicle
-RegisterNetEvent('lock')
-AddEventHandler('lock',function()
-	local player = GetPlayerPed(-1)
+RegisterCommand("lock", function()
     local vehicle = saveVehicle
+	local vehcoords = GetEntityCoords(vehicle)
+	local coords = GetEntityCoords(PlayerPedId())
 	local isLocked = GetVehicleDoorLockStatus(vehicle)
-	local distanceToVeh = GetDistanceBetweenCoords(GetEntityCoords(player), GetEntityCoords(vehicle), 1)
 		if DoesEntityExist(vehicle) then
-			if distanceToVeh <= lockDistance then
+			if #(vehcoords - coords) < lockDistance then
 				if (isLocked == 1) then
 				PlaySoundFrontend(-1, "BUTTON", "MP_PROPERTIES_ELEVATOR_DOORS", 1)
-				TaskPlayAnim(GetPlayerPed(-1), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
+				TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 				SetVehicleDoorsLocked(vehicle, 2)
 				ShowNotification("You have ~r~locked~r~ ~w~your vehicle.")
 				TriggerEvent('lockLights')
 				else
 				PlaySoundFrontend(-1, "BUTTON", "MP_PROPERTIES_ELEVATOR_DOORS", 1)
-				TaskPlayAnim(GetPlayerPed(-1), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
+				TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 				SetVehicleDoorsLocked(vehicle,1)
 				ShowNotification("You have ~g~unlocked~g~ ~w~your vehicle.")
 				TriggerEvent('lockLights')
@@ -69,11 +68,11 @@ AddEventHandler('lock',function()
 end)
 
 -- Save vehicle
-RegisterNetEvent('save')
-AddEventHandler('save',function() 
-	local player = GetPlayerPed(-1)
-	if (IsPedSittingInAnyVehicle(player)) then 
-		if saved == true then
+RegisterCommand("save",function()
+	local player = PlayerPedId()
+	if not (IsPedSittingInAnyVehicle(player)) then
+		ShowNotification("~r~You must be in a vehicle to save it")
+	  elseif saved == true then
 			saveVehicle = nil
 			RemoveBlip(targetBlip)
 			ShowNotification("Saved vehicle ~r~removed~w~.")
@@ -86,7 +85,6 @@ AddEventHandler('save',function()
 			SetBlipSprite(targetBlip,225)
 			ShowNotification("Vehicle ~g~saved~w~.")
 			saved = true
-		end
 	end
 end)
 
@@ -96,3 +94,5 @@ function ShowNotification(text)
     AddTextComponentString(text)
     DrawNotification(false, false)
 end
+
+RegisterKeyMapping('lock', 'Unlock and lock your saved car', 'keyboard', 'i') -- you can change the keybind in your game settings
