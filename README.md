@@ -27,7 +27,7 @@ The keys can be changed in the game menu.
 > **v1.0.1**
 > - Added keybind option  
 > - Minor tweaks  
-> (Thanks to *cyanURP*)
+> (Thanks to *cyanURP* and  *Geerdodagr8*)
 
 > **v1.0**
 > - Initial Release 
