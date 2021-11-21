@@ -4,7 +4,7 @@ local lockDistance = 30 -- The radius you have to be in to lock/unlock your vehi
 --[[
 ─────────────────────────────────────────────────────────────────
 
-	CarLock (client.lua) - Created by ItzEndah
+	CarLock (client.lua) - Created by Lama
 	
 	Support - Lama#9612 on Discord
 	
