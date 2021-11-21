@@ -3,7 +3,7 @@ game 'gta5'
 
 name 'CarLock'
 description 'Vehicle lock system.'
-author 'ItzEndah'
+author 'Lama'
 version '1.0.1'
 
 client_script "client.lua"
