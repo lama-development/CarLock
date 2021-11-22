@@ -20,7 +20,7 @@ The keys can be changed in the game menu.
 
 
 ## :eyes: **Preview** 
-[Endah's Car Lock - FiveM Resource | DEMO](https://youtu.be/p_MImN77A0k)
+[Lama's Car Lock - FiveM Resource | DEMO](https://youtu.be/p_MImN77A0k)
 
 
 ## :white_check_mark: **Changelog**
