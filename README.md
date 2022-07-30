@@ -25,7 +25,7 @@ The keys can be changed in the game menu.
 
 ## :white_check_mark: **Changelog**
 > **v1.2**
-> - Added version check
+> - Added version checker
 
 > **v1.1**
 > - Added keybind option  
