@@ -1,5 +1,5 @@
 # **Car Lock System**
-![carlock](https://user-images.githubusercontent.com/79053058/142773696-74c4c4bc-8457-4629-b401-9a224de117f1.png)
+![carlock](https://user-images.githubusercontent.com/79053058/181917361-14628cb9-864f-489f-8415-76731af59a59.png)
 
 
 ## :bookmark_tabs: **Description** 
@@ -24,7 +24,10 @@ The keys can be changed in the game menu.
 
 
 ## :white_check_mark: **Changelog**
-> **v1.0.1**
+> **v1.2**
+> - Added version check
+
+> **v1.1**
 > - Added keybind option  
 > - Minor tweaks  
 > (Thanks to *cyanURP* and  *Geerdodagr8*)
