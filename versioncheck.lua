@@ -1,6 +1,6 @@
 Citizen.CreateThread( function()
-updatePath = "/ItzEndah/HealingPads"
-resourceName = "HealingPads"
+updatePath = "/ItzEndah/CarLock"
+resourceName = "CarLock by Lama"
 
 function checkVersion(err,responseText, headers)
     -- Returns the current version set in fxmanifest.lua
