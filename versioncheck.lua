@@ -7,7 +7,7 @@ function checkVersion(err,responseText, headers)
 	curVersion = GetResourceMetadata(GetCurrentResourceName(), "version")
 
 	if tonumber(curVersion) < tonumber(responseText) then
-		print("^3WARNING!\n" .. resourceName .. " is outdated.\nLatest version: " .. responseText .. "Current version: " .. curVersion .. "\nPlease update it from: https://github.com" .. updatePath)
+		print("^1WARNING!\n" .. resourceName .. " is outdated.\nLatest version: " .. responseText .. "Current version: " .. curVersion .. "\nPlease update it from: https://github.com" .. updatePath)
 	else
 		print("^2" .. resourceName .." is up to date. Enjoy.")
 	end
