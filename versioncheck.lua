@@ -9,7 +9,7 @@ function checkVersion(err,responseText, headers)
 	if tonumber(curVersion) < tonumber(responseText) then
 		print("^3WARNING!\n" .. resourceName .. " is outdated.\nLatest version: " .. responseText .. "Current version: " .. curVersion .. "\nPlease update it from: https://github.com" .. updatePath)
 	else
-		print("^5" .. resourceName .." is up to date. Enjoy.")
+		print("^2" .. resourceName .." is up to date. Enjoy.")
 	end
 end
 
