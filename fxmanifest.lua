@@ -6,5 +6,5 @@ description 'Vehicle lock system.'
 author 'Lama#9612'
 version '1.2'
 
-client_script "client.lua"
-server_script "versioncheck.lua"
+client_script 'client.lua'
+server_script 'versioncheck.lua'
