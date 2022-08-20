@@ -24,6 +24,12 @@ The keys can be changed in the game menu.
 - Drag the folder to your server resource folder
 - Add `start CarLock` or `ensure CarLock` to your server.cfg 
 
+## 📈 Resmon
+| Context | CPU |
+| ------------- | ------------- |
+| Idle | 0.00 ms  |
+| Peak | 0.01 ms  |
+
 ## :white_check_mark: **Changelog**
 > **v1.2**
 > - Added version checker
