@@ -19,13 +19,13 @@ The keys can be changed in the game menu.
 ## :eyes: **Preview** 
 [Youtube](https://youtu.be/p_MImN77A0k)
 
-## 📈 Resmon
+## :bar_chart: **Resmon**
 | Context | CPU |
 | ------------- | ------------- |
 | Idle | 0.00 ms  |
 | Peak | 0.01 ms  |
 
-## 📥 Installation
+## :inbox_tray: **Installation**
 - Rename the folder from `CarLock-main` to `CarLock`
 - Drag the folder to your server resource folder
 - Add `start CarLock` or `ensure CarLock` to your server.cfg 
@@ -41,3 +41,11 @@ The keys can be changed in the game menu.
 
 > **v1.0**
 > - Initial Release 
+
+## :heart: **Support me**
+Please consider leaving a like or a simple comment if you enjoyed this release, to show support and allowing me to keep making free high-quality resources.  
+
+You can also check out my other releases:
+- [TruckJob](https://forum.cfx.re/t/free-truckjob-work-as-a-truck-driver/4898910)
+- [HealingPads](https://forum.cfx.re/t/free-healingpads-heal-at-hospitals/4888341)
+- [ShotSpotter](https://forum.cfx.re/t/free-shotspotter-gunshot-detection-system/3599253/1)
