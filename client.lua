@@ -3,7 +3,7 @@ local lockDistance = 30 -- The radius you have to be in to lock/unlock your vehi
 
 --[[
 CarLock - Created by Lama	
-For support - Lama#9612 on Discord	
+For support - https://discord.gg/etkAKTw3M7
 Do not edit below if you don't know what you are doing
 ]]--
 
