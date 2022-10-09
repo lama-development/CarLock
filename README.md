@@ -1,5 +1,5 @@
 # **CarLock - Animation & Sound**
-![carlock](https://user-images.githubusercontent.com/79053058/181917361-14628cb9-864f-489f-8415-76731af59a59.png)
+![CarLock](https://user-images.githubusercontent.com/79053058/194764916-28051fc0-053b-4709-b90a-cbcebb755b06.png)
 
 ## :bookmark_tabs: **Description** 
 This is a simple standalone **Car Lock** script made for **FiveM**.  
