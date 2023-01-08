@@ -6,7 +6,7 @@ Do not edit below if you don't know what you are doing
 
 -- version checker
 Citizen.CreateThread( function()
-	updatePath = "/ItzEndah/CarLock"
+	updatePath = "/lama-development/CarLock"
 	resourceName = "CarLock by Lama"
 	
 	function checkVersion(err, responseText, headers)
