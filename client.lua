@@ -67,8 +67,8 @@ end)
 RegisterKeyMapping('save', 'Save and unsave the car you are in', 'keyboard', 'delete') 
 RegisterCommand("save",function()
 	local player = PlayerPedId()
-	  if (IsPedSittingInAnyVehicle(player)) then
-			if saved == true then
+	if GetPedInVehicleSeat(GetVehiclePedIsIn(PlayerPedId()), -1) == PlayerPedId() then
+		if saved == true then
 			saveVehicle = nil
 			RemoveBlip(targetBlip)
 			ShowNotification("~b~[CarLock] ~w~Vehicle ~r~removed~")
